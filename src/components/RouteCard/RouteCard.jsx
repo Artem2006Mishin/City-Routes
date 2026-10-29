@@ -1,19 +1,13 @@
+import { ROUTE_DIFFICULTY } from "@/constants/route";
+
 import styles from "./RouteCard.module.css";
 
 import StarIcon from "@/icons/star.svg?react";
 import RouteIcon from "@/icons/route.svg?react";
-import EasyIcon from "@/icons/easy.svg?react";
-import MediumIcon from "@/icons/medium.svg?react";
-import HardIcon from "@/icons/hard.svg?react";
+
 import LocationIcon from "@/icons/location.svg?react";
 import EditIcon from "@/icons/edit.svg?react";
 import TrashIcon from "@/icons/trash.svg?react";
-
-const DIFFICULTY = {
-	easy: { label: "ЛЕГКО", Icon: EasyIcon },
-	medium: { label: "СРЕДНЕ", Icon: MediumIcon },
-	hard: { label: "СЛОЖНО", Icon: HardIcon },
-};
 
 function formatDate(iso) {
 	const date = new Date(iso);
@@ -29,7 +23,7 @@ function formatDate(iso) {
 
 function RouteCard({ route, onEdit, onDelete }) {
 	const { day, month } = formatDate(route.date);
-	const { label, Icon: DifficultyIcon } = DIFFICULTY[route.difficulty];
+	const { label, Icon: DifficultyIcon } = ROUTE_DIFFICULTY[route.difficulty];
 
 	return (
 		<article className={styles.card}>

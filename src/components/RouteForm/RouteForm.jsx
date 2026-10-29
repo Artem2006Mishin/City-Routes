@@ -35,6 +35,7 @@ function RouteForm({ onSubmit, className = "" }) {
 
 	const dateInputRef = useRef(null);
 
+	// TODO: при создании блока "сложность" учитывать ROUTE_DIFFICULTY
 	return (
 		<form className={`${styles.form} ${className}`} onSubmit={handleSubmit}>
 			<h2 className={styles.title}>Добавить маршрут</h2>
