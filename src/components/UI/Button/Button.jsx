@@ -1,12 +1,24 @@
-import styles from "./Button.module.css";
+import classes from "./Button.module.css";
 
-function Button({ children, type = "button", className = "", icon: Icon }) {
+export const BUTTON_VARIANTS = {
+	PRIMARY: "primary",
+	DELETE: "delete",
+	CLEAR: "clear",
+	EDIT: "edit",
+};
+
+export const Button = ({
+	children,
+	variant = BUTTON_VARIANTS.PRIMARY,
+	...props
+}) => {
+	const buttonClasses = [classes.base, classes[variant]]
+		.filter(Boolean)
+		.join(" ");
+
 	return (
-		<button className={`${styles.button} ${styles[className]}`} type={type}>
-			<Icon />
+		<button className={buttonClasses} {...props}>
 			{children}
 		</button>
 	);
-}
-
-export default Button;
+};

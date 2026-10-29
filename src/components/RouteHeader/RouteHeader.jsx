@@ -1,5 +1,6 @@
 import styles from "./RouteHeader.module.css";
 
+// TODO: размонтировать и перенести напрямую в RoutePages
 function RouteHeader({ className = "" }) {
 	return (
 		<div className={`${styles.header} ${className}`}>

@@ -1,4 +1,4 @@
-.list {
+.ul {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 16px;
@@ -6,6 +6,6 @@
 	list-style: none;
 }
 
-.item {
+.li {
 	min-width: 0;
 }

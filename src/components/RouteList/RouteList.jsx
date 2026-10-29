@@ -1,11 +1,11 @@
 import RouteCard from "@/components/RouteCard/RouteCard";
-import styles from "./RouteList.module.css";
+import classes from "./RouteList.module.css";
 
-function RouteList({ routes, className = "" }) {
+function RouteList({ className, routes }) {
 	return (
-		<ul className={`${styles.list} ${className}`}>
+		<ul className={[classes.ul, className].filter(Boolean).join(" ")}>
 			{routes.map((route) => (
-				<li key={route.id} className={styles.item}>
+				<li key={route.id} className={classes.li}>
 					<RouteCard
 						route={route}
 						onEdit={() => console.log("edit")}

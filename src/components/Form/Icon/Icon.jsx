@@ -1,6 +1,6 @@
-import styles from "./FieldIcon.module.css";
+import styles from "./Icon.module.css";
 
-function FieldIcon({ icon: Icon, onClick }) {
+function Icon({ icon: Icon, onClick }) {
 	// иконки нет
 	if (!Icon) return null;
 
@@ -19,4 +19,4 @@ function FieldIcon({ icon: Icon, onClick }) {
 	);
 }
 
-export default FieldIcon;
+export default Icon;

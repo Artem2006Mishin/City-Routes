@@ -1,11 +1,11 @@
 import { useState, useRef } from "react";
 
-import styles from "./RouteForm.module.css";
+import classes from "./RouteForm.module.css";
 
 import FormField from "@/components/Form/FormField/FormField";
-import FieldIcon from "@/components/Form/FieldIcon/FieldIcon";
-import FieldInput from "@/components/Form/FieldInput/FieldInput";
-import Button from "@/components/UI/Button/Button";
+import Icon from "@/components/Form/Icon/Icon";
+import Input from "@/components/Form/Input/Input";
+import { Button, BUTTON_VARIANTS } from "@/components/UI/Button/Button";
 
 import AddIcon from "@/icons/add.svg?react";
 import RouteIcon from "@/icons/route.svg?react";
@@ -18,7 +18,7 @@ import HashtagIcon from "@/icons/hashtag.svg?react";
 
 const INITIAL_VALUES = { title: "", date: "", distance: 0 };
 
-function RouteForm({ onSubmit, className = "" }) {
+function RouteForm({ className, onSubmit }) {
 	const [values, setValues] = useState(INITIAL_VALUES);
 
 	const handleChange = (e) => {
@@ -37,49 +37,53 @@ function RouteForm({ onSubmit, className = "" }) {
 
 	// TODO: при создании блока "сложность" учитывать ROUTE_DIFFICULTY
 	return (
-		<form className={`${styles.form} ${className}`} onSubmit={handleSubmit}>
-			<h2 className={styles.title}>Добавить маршрут</h2>
+		<form
+			className={[classes.form, className].filter(Boolean).join(" ")}
+			onSubmit={handleSubmit}
+		>
+			<h2 className={classes.title}>Добавить маршрут</h2>
 
 			<FormField label="Название маршрута" hint="Минимум 3 символа">
-				<FieldInput
+				<Input
 					name="title"
 					type="text"
 					value={values.title}
 					onChange={handleChange}
 					placeholder="Например, Рассвет вдоль Яузы"
 				/>
-				<FieldIcon icon={RouteIcon} />
+				<Icon icon={RouteIcon} />
 			</FormField>
 
-			<div className={styles.wrapper}>
+			<div className={classes.wrapper}>
 				<FormField
 					label="Дата старта"
 					hint="Формат: день · месяц · год"
 					onClick={() => dateInputRef.current?.showPicker()}
 				>
-					<FieldInput
+					<Input
 						ref={dateInputRef}
 						name="date"
 						type="date"
 						value={values.date}
 						onChange={handleChange}
 					/>
-					<FieldIcon icon={DateIcon} />
+					<Icon icon={DateIcon} />
 				</FormField>
 
 				<FormField label="Дистанция" hint="Положительное число">
-					<FieldInput
+					<Input
 						name="distance"
 						type="number"
 						value={values.distance}
 						onChange={handleChange}
 					/>
-					<FieldIcon icon={HashtagIcon} />
+					<Icon icon={HashtagIcon} />
 				</FormField>
 			</div>
 
-			<div className={styles.wrapper}>
-				<Button type={"submit"} className={"addButton"} icon={AddIcon}>
+			<div className={classes.wrapper}>
+				<Button variant={BUTTON_VARIANTS.PRIMARY} type={"submit"}>
+					<AddIcon />
 					Добавить
 				</Button>
 			</div>

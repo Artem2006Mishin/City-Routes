@@ -1,4 +1,4 @@
-.button {
+.base {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -16,29 +16,29 @@
 	cursor: pointer;
 }
 
-.addButton {
+.primary {
 	color: var(--color-page);
 	background-color: var(--color-accent);
 }
 
-.addButton:hover,
-.addButton:focus-visible {
+.primary:hover,
+.primary:focus-visible {
 	background-color: var(--color-accent-hover);
 }
 
-.clearButton {
+/* .clear {
 	color: var(--color-text-primary);
 	background-color: transparent;
 	border: 1px solid var(--color-border);
 }
 
-.clearButton:hover,
+.clear:hover,
 .clearButton:focus-visible {
 	background-color: var(--color-interactive);
 }
 
-.clearButton:focus-visible,
-.addButton:focus-visible {
+.clear:focus-visible,
+.primary:focus-visible {
 	outline: var(--focus-ring-width) solid var(--focus-ring-color);
 	outline-offset: var(--focus-ring-offset);
-}
+} */

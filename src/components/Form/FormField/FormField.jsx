@@ -1,6 +1,6 @@
 import styles from "./FormField.module.css";
 
-function FormField({ label, hint, children, onClick }) {
+function FormField({ children, label, hint, onClick }) {
 	return (
 		<div className={styles.field}>
 			<label className={styles.label}>{label}</label>
