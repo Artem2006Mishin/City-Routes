@@ -1,9 +1,7 @@
 import { useState } from "react";
-
-import styles from "./RoutesPage.module.css";
-import RouteHeader from "@/components/RouteHeader/RouteHeader";
-import RouteList from "@/components/RouteList/RouteList";
-import RouteForm from "@/components/RouteForm/RouteForm";
+import classes from "./RoutesPage.module.css";
+import RouteList from "@/features/routes/components/RouteList/RouteList";
+import RouteForm from "@/features/routes/components/RouteForm/RouteForm";
 
 function RoutesPage() {
 	const [routes, setRoutes] = useState([
@@ -44,10 +42,20 @@ function RoutesPage() {
 	};
 
 	return (
-		<section className={styles.page}>
-			<RouteHeader className={styles.header} />
-			<RouteList routes={routes} className={styles.list} />
-			<RouteForm onSubmit={onSubmit} className={styles.form} />
+		<section className={classes.page}>
+			<div className={`${classes.header}`}>
+				<div className={classes.content}>
+					<h2 className={classes.title}>Ближайшие заезды</h2>
+					<p className={classes.description}>
+						Маршруты отсортированы по дате старта. Прошедшие остаются в афише.
+					</p>
+				</div>
+
+				<div className={classes.actions}>фильтр</div>
+			</div>
+
+			<RouteList routes={routes} className={classes.list} />
+			<RouteForm onSubmit={onSubmit} className={classes.form} />
 		</section>
 	);
 }

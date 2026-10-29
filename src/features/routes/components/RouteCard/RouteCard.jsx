@@ -1,4 +1,4 @@
-import { ROUTE_DIFFICULTY } from "@/constants/route";
+import { ROUTE_DIFFICULTY } from "@/features/routes/constants";
 
 import styles from "./RouteCard.module.css";
 

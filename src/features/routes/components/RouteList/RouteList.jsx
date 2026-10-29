@@ -1,4 +1,4 @@
-import RouteCard from "@/components/RouteCard/RouteCard";
+import RouteCard from "@/features/routes/components/RouteCard/RouteCard";
 import classes from "./RouteList.module.css";
 
 function RouteList({ className, routes }) {

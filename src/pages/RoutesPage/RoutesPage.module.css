@@ -10,6 +10,34 @@
 
 .header {
 	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.title {
+	color: var(--color-text-primary);
+	font-family: var(--font-primary);
+	font-size: 36px;
+	font-weight: 680;
+	letter-spacing: -0.8px;
+	line-height: 1.1;
+}
+
+.description {
+	color: var(--color-text-secondary);
+	font-family: var(--font-secondary);
+	font-size: 14px;
+	line-height: 1.45;
+}
+
+.actions {
+	color: red;
 }
 
 .list {

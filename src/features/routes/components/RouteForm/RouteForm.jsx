@@ -2,10 +2,10 @@ import { useState, useRef } from "react";
 
 import classes from "./RouteForm.module.css";
 
-import FormField from "@/components/Form/FormField/FormField";
-import Icon from "@/components/Form/Icon/Icon";
-import Input from "@/components/Form/Input/Input";
-import { Button, BUTTON_VARIANTS } from "@/components/UI/Button/Button";
+import FormField from "@/shared/ui/FormField/FormField";
+import Icon from "@/shared/ui/Icon/Icon";
+import Input from "@/shared/ui/Input/Input";
+import Button, { BUTTON_VARIANTS } from "@/shared/ui/Button/Button";
 
 import AddIcon from "@/icons/add.svg?react";
 import RouteIcon from "@/icons/route.svg?react";
