@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import classes from "./RouteForm.module.css";
+import classes from "./Form.module.css";
 
 import FormField from "@/shared/ui/FormField/FormField";
 import Icon from "@/shared/ui/Icon/Icon";
@@ -18,7 +18,7 @@ import HashtagIcon from "@/icons/hashtag.svg?react";
 
 const INITIAL_VALUES = { title: "", date: "", distance: 0 };
 
-function RouteForm({ className, onSubmit }) {
+function Form({ className, onSubmit }) {
 	const [values, setValues] = useState(INITIAL_VALUES);
 
 	const handleChange = (e) => {
@@ -163,4 +163,4 @@ function RouteForm({ className, onSubmit }) {
 	// );
 }
 
-export default RouteForm;
+export default Form;

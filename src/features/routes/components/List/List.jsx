@@ -1,12 +1,12 @@
-import RouteCard from "@/features/routes/components/RouteCard/RouteCard";
-import classes from "./RouteList.module.css";
+import Card from "@/features/routes/components/Card/Card";
+import classes from "./List.module.css";
 
-function RouteList({ className, routes }) {
+function List({ className, routes }) {
 	return (
 		<ul className={[classes.ul, className].filter(Boolean).join(" ")}>
 			{routes.map((route) => (
 				<li key={route.id} className={classes.li}>
-					<RouteCard
+					<Card
 						route={route}
 						onEdit={() => console.log("edit")}
 						onDelete={() => console.log("delete")}
@@ -17,4 +17,4 @@ function RouteList({ className, routes }) {
 	);
 }
 
-export default RouteList;
+export default List;

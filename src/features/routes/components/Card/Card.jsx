@@ -1,6 +1,6 @@
 import { ROUTE_DIFFICULTY } from "@/features/routes/constants";
 
-import styles from "./RouteCard.module.css";
+import styles from "./Card.module.css";
 
 import StarIcon from "@/icons/star.svg?react";
 import RouteIcon from "@/icons/route.svg?react";
@@ -21,7 +21,7 @@ function formatDate(iso) {
 	};
 }
 
-function RouteCard({ route, onEdit, onDelete }) {
+function Card({ route, onEdit, onDelete }) {
 	const { day, month } = formatDate(route.date);
 	const { label, Icon: DifficultyIcon } = ROUTE_DIFFICULTY[route.difficulty];
 
@@ -83,4 +83,4 @@ function RouteCard({ route, onEdit, onDelete }) {
 	);
 }
 
-export default RouteCard;
+export default Card;

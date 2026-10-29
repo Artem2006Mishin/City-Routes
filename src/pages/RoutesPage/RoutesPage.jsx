@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./RoutesPage.module.css";
-import RouteList from "@/features/routes/components/RouteList/RouteList";
-import RouteForm from "@/features/routes/components/RouteForm/RouteForm";
+import RouteList from "@/features/routes/components/List/List";
+import RouteForm from "@/features/routes/components/Form/Form";
 
 function RoutesPage() {
 	const [routes, setRoutes] = useState([
