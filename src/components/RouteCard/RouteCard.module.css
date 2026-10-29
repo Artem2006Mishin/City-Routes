@@ -1,0 +1,209 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+
+	width: 388px;
+	height: 360px;
+	padding: 22px;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+
+	background-color: var(--color-surface);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.date {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 64px;
+	height: 64px;
+	border-radius: var(--radius-md);
+
+	color: var(--color-accent);
+	background-color: var(--color-accent-soft);
+}
+
+.day {
+	font-family: var(--font-primary);
+	font-weight: bold;
+	font-size: 26px;
+}
+
+.month {
+	font-family: var(--font-secondary);
+	font-size: 10px;
+}
+
+.upcomingBadge,
+.difficultyBadge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 7px;
+
+	height: fit-content;
+	padding: 7px 11px;
+	border-radius: var(--radius-pill);
+
+	color: var(--color-accent);
+	background-color: var(--color-accent-soft);
+}
+
+.upcomingIcon,
+.difficultyIcon {
+	width: 14px;
+	height: 14px;
+	color: var(--color-accent);
+}
+
+.upcomingLabel,
+.difficultyLabel {
+	font-family: var(--font-secondary);
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+
+.title {
+	color: var(--color-text-primary);
+	font-family: var(--font-primary);
+	font-size: var(--font-size-title);
+	font-weight: 650;
+	line-height: 1.15;
+}
+
+.description {
+	color: var(--color-text-secondary);
+	font-family: var(--font-secondary);
+	font-size: var(--font-size-label);
+	line-height: 1.45;
+}
+
+.metadata {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.distance {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.distanceIcon {
+	width: 16px;
+	height: 16px;
+	color: var(--color-text-muted);
+}
+
+.distanceLabel {
+	color: var(--color-text-primary);
+	font-family: var(--font-secondary);
+	font-size: var(--font-size-caption);
+	font-weight: 650;
+}
+
+.startLocation {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.startIcon {
+	width: 16px;
+	height: 16px;
+	color: var(--color-text-muted);
+}
+
+.locationLabel {
+	color: var(--color-text-secondary);
+	font-family: var(--font-secondary);
+	font-size: var(--font-size-caption);
+	font-weight: 500;
+}
+
+.actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	padding-top: 14px;
+	border-top: 1px solid var(--color-border);
+}
+
+.editButton,
+.deleteButton {
+	border: 0;
+	border-radius: var(--radius-md);
+	font-family: var(--font-secondary);
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.editButton {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	height: 40px;
+	padding: 0 20px;
+	color: var(--color-text-secondary);
+	background-color: transparent;
+}
+
+.editIcon {
+	width: 20px;
+	height: 20px;
+	color: currentColor;
+}
+
+.deleteButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	color: var(--color-error);
+	background-color: var(--color-interactive);
+	border: 1px solid var(--color-border);
+}
+
+.deleteIcon {
+	width: 20px;
+	height: 20px;
+	color: currentColor;
+}
+
+.editButton:hover,
+.editButton:focus-visible {
+	color: var(--color-text-primary);
+	background-color: var(--color-interactive);
+}
+
+.deleteButton:hover,
+.deleteButton:focus-visible {
+	background-color: var(--color-elevated);
+}
+
+.editButton:focus-visible,
+.deleteButton:focus-visible {
+	outline: var(--focus-ring-width) solid var(--focus-ring-color);
+	outline-offset: var(--focus-ring-offset);
+}

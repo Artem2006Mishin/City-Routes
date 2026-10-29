@@ -1,0 +1,21 @@
+.page {
+	display: grid;
+	grid-template-rows: 70px 1fr;
+	grid-template-columns: 1fr 380px;
+	grid-template-areas:
+		"header header"
+		"list   form";
+	gap: 24px;
+}
+
+.header {
+	grid-area: header;
+}
+
+.list {
+	grid-area: list;
+}
+
+.form {
+	grid-area: form;
+}

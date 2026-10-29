@@ -1,5 +1,11 @@
+import RoutesPage from "@/pages/RoutesPage/RoutesPage";
+
 function App() {
-	return <h1>Hello, React!</h1>;
+	return (
+		<main className="main">
+			<RoutesPage />
+		</main>
+	);
 }
 
 export default App;

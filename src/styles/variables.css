@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+	/* Backgrounds */
+	--color-page: #080f0d;
+	--color-surface: #121815;
+	--color-elevated: #18211d;
+	--color-interactive: #1e2924;
+
+	/* Accent */
+	--color-accent: #63f59a;
+	--color-accent-hover: #86ffb3;
+	--color-accent-pressed: #36d975;
+	--color-accent-soft: #173c29;
+	--color-on-accent: #07100a;
+
+	/* Text */
+	--color-text-primary: #f2f7f4;
+	--color-text-secondary: #a4b2aa;
+	--color-text-muted: #6e7e75;
+
+	/* Border */
+	--color-border: #27352f;
+	--color-border-strong: #3a4c43;
+
+	/* Status */
+	--color-success: #63f59a;
+	--color-warning: #f6c85f;
+	--color-error: #ff6b78;
+	--color-error-hover: #ff8791;
+	--color-error-pressed: #e65361;
+	--color-error-soft: #3d1d24;
+	--color-on-error: #160708;
+	--color-info: #6cc7ff;
+
+	/* Font families */
+	--font-primary: "Space Grotesk", system-ui, sans-serif;
+	--font-secondary: "Inter", system-ui, sans-serif;
+
+	/* Font sizes */
+	--font-size-display: 48px;
+	--font-size-heading: 32px;
+	--font-size-title: 22px;
+	--font-size-body: 16px;
+	--font-size-label: 13px;
+	--font-size-caption: 12px;
+
+	/* Spacing */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-6: 24px;
+	--space-8: 32px;
+	--space-12: 48px;
+	--space-16: 64px;
+
+	/* Radius */
+	--radius-sm: 8px;
+	--radius-md: 12px;
+	--radius-lg: 18px;
+	--radius-xl: 24px;
+	--radius-pill: 999px;
+
+	/* Focus */
+	--focus-ring-width: 2px;
+	--focus-ring-offset: 2px;
+	--focus-ring-color: var(--color-accent);
+}

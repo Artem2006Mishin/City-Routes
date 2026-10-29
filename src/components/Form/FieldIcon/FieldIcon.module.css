@@ -1,0 +1,17 @@
+.wrapper,
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	color: var(--color-text-muted);
+}
+
+.button {
+	cursor: pointer;
+}
+
+.icon {
+	width: 18px;
+	height: 18px;
+}
